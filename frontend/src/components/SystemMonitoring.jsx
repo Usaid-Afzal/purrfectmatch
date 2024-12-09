@@ -30,7 +30,7 @@ const SystemMonitoring = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        "http://localhost:5000/api/admin/activities",
+        "https://purrfectmatch-backend.onrender.com/api/admin/activities",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
