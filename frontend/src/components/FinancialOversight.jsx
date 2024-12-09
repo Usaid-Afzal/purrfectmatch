@@ -71,7 +71,7 @@ const FinancialOversight = () => {
   const fetchFinancialData = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get('http://localhost:5000/api/admin/financial-data', {
+      const { data } = await axios.get('https://purrfectmatch-backend.onrender.com/api/admin/financial-data', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
