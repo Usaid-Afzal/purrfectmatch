@@ -33,7 +33,7 @@ const ListingDetails = () => {
     const fetchListing = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/api/listings/${id}`,
+          `https://purrfectmatch-backend.onrender.com/api/listings/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -61,7 +61,7 @@ const ListingDetails = () => {
   const handleStartChat = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/chats",
+        "https://purrfectmatch-backend.onrender.com/api/chats",
         {
           sellerId: listing.owner._id,
           listingId: listing._id,
