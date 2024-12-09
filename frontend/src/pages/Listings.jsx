@@ -43,7 +43,7 @@ const Listings = () => {
       if (animalType) params.append('type', animalType);
       if (location) params.append('location', location);
 
-      const { data } = await axios.get(`http://localhost:5000/api/listings?${params}`, {
+      const { data } = await axios.get(`https://purrfectmatch-backend.onrender.com/api/listings?${params}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'application/json'
