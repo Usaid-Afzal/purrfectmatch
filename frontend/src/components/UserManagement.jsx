@@ -33,7 +33,7 @@ const UserManagement = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admin/users", {
+      const response = await fetch("https://purrfectmatch-backend.onrender.com/api/admin/users", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -56,7 +56,7 @@ const UserManagement = () => {
   const handleEditUser = async (values) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/${editingUser._id}`,
+        `https://purrfectmatch-backend.onrender.com/api/admin/users/${editingUser._id}`,
         {
           method: "PUT",
           headers: {
@@ -106,7 +106,7 @@ const UserManagement = () => {
       onConfirm: async () => {
         try {
           await axios.delete(
-            `http://localhost:5000/api/admin/users/${user._id}`,
+            `https://purrfectmatch-backend.onrender.com/api/admin/users/${user._id}`,
             {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
