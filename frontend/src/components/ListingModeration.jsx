@@ -44,7 +44,7 @@ const ListingModeration = () => {
   const fetchListings = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get('http://localhost:5000/api/admin/listings/moderation', {
+      const { data } = await axios.get('https://purrfectmatch-backend.onrender.com/api/admin/listings/moderation', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ const ListingModeration = () => {
 
   const handleApprove = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/admin/listings/${id}/approve`, {}, {
+      await axios.put(`https://purrfectmatch-backend.onrender.com/api/admin/listings/${id}/approve`, {}, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -95,7 +95,7 @@ const ListingModeration = () => {
 
   const handleReject = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/listings/${id}/reject`, {
+      await axios.delete(`https://purrfectmatch-backend.onrender.com/api/admin/listings/${id}/reject`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
